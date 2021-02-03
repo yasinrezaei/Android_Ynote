@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.drawerlayout.widget.DrawerLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity"
+    android:id="@+id/drawer"
+    >
+    <com.google.android.material.navigation.NavigationView
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        app:menu="@menu/drawer_menu"
+        android:layout_gravity="start"
+        app:headerLayout="@layout/nav_header"
+        android:id="@+id/navigationview">
+
+    </com.google.android.material.navigation.NavigationView>
+
+
+    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        tools:context=".SecondActivity"
+        android:background="#FFC107">
+        <ImageButton
+            android:id="@+id/back_email"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="right"
+            android:src="@drawable/ic_back_ios_24"/>
+
+        <LinearLayout
+            android:id="@+id/top"
+            android:orientation="horizontal"
+            android:background="#FFC107"
+            android:layout_width="match_parent"
+            android:layout_height="80dp"
+            android:weightSum="1.4"
+            tools:ignore="MissingConstraints"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent">
+
+            <Button
+                android:id="@+id/saturday"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight=".2"
+                android:text="sat"
+                android:textSize="12dp"
+
+                />
+
+            <Button
+                android:id="@+id/sunday"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight=".2"
+                android:text="sun"
+                android:textSize="12dp" />
+            <Button
+                android:id="@+id/monday"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight=".2"
+                android:text="mon"
+                android:textSize="12dp"/>
+            <Button
+                android:id="@+id/tuesday"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight=".2"
+                android:text="tue"
+                android:textSize="12dp"/>
+            <Button
+                android:id="@+id/wednesday"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight=".2"
+                android:text="wed"
+                android:textSize="12dp"/>
+            <Button
+                android:id="@+id/thursday"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight=".2"
+                android:text="thu"
+                android:textSize="12dp"/>
+            <Button
+                android:id="@+id/friday"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight=".2"
+                android:text="fri"
+                android:textSize="12dp"/>
+
+        </LinearLayout>
+
+        <FrameLayout
+            android:id="@+id/main_frame"
+            android:background="#716F6F"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            >
+        </FrameLayout>
+
+
+
+
+    </LinearLayout>
+
+</androidx.drawerlayout.widget.DrawerLayout>

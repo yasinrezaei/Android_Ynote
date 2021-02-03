@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="#FFFFFF">
+
+
+    <view
+        android:id="@+id/recyclerview"
+        class="androidx.recyclerview.widget.RecyclerView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="80dp"
+        app:layout_constraintLeft_toLeftOf="@+id/add"
+        app:layout_constraintTop_toBottomOf="@+id/add">
+
+    </view>
+
+    <LinearLayout
+        android:id="@+id/add"
+        android:orientation="horizontal"
+        android:background="#FFC107"
+        android:layout_width="match_parent"
+        android:layout_height="80dp"
+        tools:ignore="MissingConstraints"
+        app:layout_constraintLeft_toLeftOf="parent"
+        >
+        <ImageButton
+            android:id="@+id/btn_create_note"
+            android:layout_width="348dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="#0000"
+            android:src="@drawable/al"/>
+
+
+
+    </LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

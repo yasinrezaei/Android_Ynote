@@ -1,0 +1,133 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#FFC107"
+    tools:context=".MainActivity">
+
+    <Button
+        android:id="@+id/email"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:text="EMAIL"
+        android:background="@drawable/btn_background"
+        android:textColor="#FFFFFF"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:layout_marginRight="25dp"
+        app:layout_constraintRight_toRightOf="parent"/>
+    <Button
+        android:id="@+id/note"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:text="NOTE"
+        android:background="@drawable/btn_background"
+        android:textColor="#FFFFFF"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toTopOf="@+id/email"
+        android:layout_marginRight="25dp"
+        app:layout_constraintRight_toRightOf="parent"/>
+    <Button
+        android:id="@+id/location"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:text="LOCATION"
+        android:background="@drawable/btn_background"
+        android:textColor="#FFFFFF"
+        app:layout_constraintTop_toBottomOf="@+id/email"
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:layout_marginRight="25dp"
+        app:layout_constraintRight_toRightOf="parent"/>
+
+
+
+
+    <androidx.constraintlayout.motion.widget.MotionLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:layoutDescription="@xml/activity_main_scene"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+
+            <ImageView
+            android:id="@+id/imageViewIconMenu"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:layout_marginEnd="10dp"
+            android:elevation="3dp"
+            android:src="@drawable/icon_booking"
+            app:layout_constraintEnd_toEndOf="@id/constraintLayoutNavBar"
+            app:layout_constraintTop_toTopOf="@id/constraintLayoutNavBar"
+            tools:ignore="RtlCompat" />
+
+        <ImageView
+            android:id="@+id/imageViewUserAvatar"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:elevation="3dp"
+            android:src="@drawable/icon_home"
+            app:layout_constraintStart_toStartOf="@id/guidelineVertical"
+            app:layout_constraintTop_toBottomOf="@id/imageViewIconMenu" />
+
+
+
+        <TextView
+            android:id="@+id/textViewUserName"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:elevation="3dp"
+            android:ellipsize="end"
+            android:maxLines="1"
+            android:text="Home"
+            android:textColor="#FFFFFF"
+            android:textSize="14sp"
+            app:layout_constraintStart_toStartOf="@id/guidelineVertical"
+            app:layout_constraintTop_toBottomOf="@id/imageViewUserAvatar" />
+
+
+
+
+
+
+
+
+
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/guidelineVertical"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            app:layout_constraintGuide_begin="20dp" />
+
+
+
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/constraintLayoutNavBar"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginTop="60dp"
+            android:layout_marginBottom="60dp"
+            android:background="@drawable/navdrawer_background"
+            android:elevation="1dp"
+            android:orientation="vertical"
+            android:padding="0dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+
+
+    </androidx.constraintlayout.motion.widget.MotionLayout>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
